@@ -1,22 +1,48 @@
-name: dev-flow-push
-run-name: ${{ gitea.actor }} pushed to main
+name: CI
+run-name: CI
 on: 
   push:
     branches:
       - dev
+  pull_request:
+    branhces:
+      - main
 
 jobs:
-  default-job:
+  CI:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by Gitea!"
-      - run: echo "🔎 The name of your branch is ${{ gitea.ref }} and your repository is ${{ gitea.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "💡 The ${{ gitea.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: Compiler Check
         run: |
-          ls ${{ gitea.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          echo "Compiler checking TBD"
+      - name: Src Vonurability Scan
+        run: |
+          echo "src vonurability scan TBD"
+      - name: Linting
+        run: |
+          echo "Linting TBD"
+      - name: Build
+        run: |
+          echo "Building TBD"
+      - name: Unit Test
+        run: |
+          echo "Unit testing TBD"
+      - name: Integration Test
+        run: |
+          echo "Integration Testing TBD"
+      - name: Binary upload
+        run: |
+          echo "Binary upload Testing TBD"
+      - name: Container build
+        run: |
+          echo "Continer Build TBD"
+      - name: Container Vonurability Scan
+        run: |
+          echo "Continer build TBD"
+      - name: Container Upload
+        run: |
+          echo "Continer upload TBD"
+      - name: Sleeper
+        run: sleep 30
