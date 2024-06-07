@@ -31,7 +31,7 @@ jobs:
           echo "Unit testing TBD"
       - name: Integration Test
         run: |
-          echo "Integration Testing TBD"
+          echo "Integration Testing TBD."
       - name: Binary upload
         run: |
           echo "Binary upload Testing TBD"
