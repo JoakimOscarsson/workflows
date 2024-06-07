@@ -1,4 +1,4 @@
-name: Push-to-dev-demo
+name: dev-flow-push
 run-name: ${{ gitea.actor }} pushed to main
 on: 
   push:
@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  Explore-Gitea-Actions:
+  default-job:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ gitea.event_name }} event."
