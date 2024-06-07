@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Compiler Check
         run: |
-          echo "Compiler checking TBD."
+          echo "Compiler checking TBD"
       - name: Src Vonurability Scan
         run: |
           echo "src vonurability scan TBD"
