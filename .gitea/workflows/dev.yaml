@@ -17,9 +17,9 @@ jobs:
       - name: Compiler Check
         run: |
           echo "Compiler checking TBD"
-      - name: Src Vonurability Scan
+      - name: Src Vulnerability Scan
         run: |
-          echo "src vonurability scan TBD"
+          echo "src vulnerability scan TBD"
       - name: Linting
         run: |
           echo "Linting TBD"
@@ -38,9 +38,9 @@ jobs:
       - name: Container build
         run: |
           echo "Continer Build TBD"
-      - name: Container Vonurability Scan
+      - name: Container Vulnerability Scan
         run: |
-          echo "Continer build TBD"
+          echo "Continer vulnerability scan TBD"
       - name: Container Upload
         run: |
           echo "Continer upload TBD"
