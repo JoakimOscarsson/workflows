@@ -1,0 +1,64 @@
+name: CI
+run-name: CI
+on: 
+  push: # TODO: See if we can make this manually triggered on all branches, and use it as protection check
+    branches:
+      - dev
+
+jobs:
+  Static Analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Compiler Check
+        run: echo "Compiler check TBD"
+
+      - name: Vulnerability Scan
+        run: echo "src vulnerability scan TBD"
+
+      - name: Linting
+        run: echo "Linting TBD"
+
+      - name: Sleeper
+        run: sleep 10
+
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Building TBD"
+
+    # Need to output the artifact
+
+      - name: Sleeper
+        run: sleep 10
+
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      # Need to input the artifact
+      - name: Unit Test
+        run: echo "Unit testing TBD"
+
+      - name: Integration Test
+        run: echo "Integration Testing TBD"
+      
+      - name: Sleeper
+        run: sleep 10
+
+  Package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Container
+        run: echo "Continer Build TBD"
+
+      - name: Container Vulnerability Scan
+        run: echo "Continer vulnerability scan TBD"
+
+      - name: Sleeper
+        run: sleep 10
