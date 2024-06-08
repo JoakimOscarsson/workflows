@@ -1,12 +1,68 @@
-name: main-flow-pull-requests
-run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀
+name: CI
+run-name: CI
 on: 
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - '**'
+      - '!main'
 
 jobs:
-  information:
+  Static Analysis:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Put stuff to do when merging to main here! Such things could include deploying"
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Compiler Check
+        run: echo "Compiler check TBD"
+
+      - name: Vulnerability Scan
+        run: echo "src vulnerability scan TBD"
+
+      - name: Linting
+        run: echo "Linting TBD"
+
+      - name: Sleeper
+        run: sleep 10
+
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo "Building TBD"
+
+      - name: Upload
+        run: echo "Uploading binary TBD"
+
+      - name: Sleeper
+        run: sleep 10
+
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unit Test
+        run: echo "Unit testing TBD"
+
+      - name: Integration Test
+        run: echo "Integration Testing TBD"
+      
+      - name: Sleeper
+        run: sleep 10
+
+  Package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Container
+        run: echo "Continer Build TBD"
+
+      - name: Container Vulnerability Scan
+        run: echo "Continer vulnerability scan TBD"
+
+      - name: Container Upload
+        run: echo "Continer upload TBD"
+
+      - name: Sleeper
+        run: sleep 10
